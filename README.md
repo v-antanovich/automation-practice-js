@@ -18,7 +18,7 @@ It contains for each theme of this course:
 | *Theme*  | *Links* |
 | ------------- | ------------- |
 | Intro  | [readme](automation-practice-js/README.md) |
-| Data types. Variables  | [example](src/js basics summary/example)  |
+| Data types. Variables  | [example](src/basics/variable/)  |
 
 ## How to start?
 
