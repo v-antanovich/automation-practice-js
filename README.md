@@ -9,7 +9,7 @@ It contains for each theme of this course:
 
 ## Branches
 
-* `master` - production code (merge after release group)
+* `main` - production code (merge after release group)
 * `dev` - feature/refactor/fix code for all themes
 * `${user}` - contains code by specific user
 
