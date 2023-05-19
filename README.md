@@ -23,7 +23,7 @@ It contains for each theme of this course:
 ## How to start?
 
    1. Create account on GitHub
-   2. Visit [repository](https://github.com/v-antanovich/automation-practice-js)
+   2. Visit [repository](https://github.com/v-antanovich/automation-practice-js) and copy link https://github.com/v-antanovich/automation-practice-js.git
    3. Clone repository with command *git clone*
    4. Set user with command *git config* [more info](https://github.com/v-antanovich)
    5. Switch to dev branch with command *git checkout dev*
