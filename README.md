@@ -25,8 +25,8 @@ It contains for each theme of this course:
    1. Create account on GitHub аnd send your accountName to community chat (to add you as contributor) 
    2. Check email and accept invitation
    3. Visit [repository](https://github.com/v-antanovich/automation-practice-js) and copy link https://github.com/v-antanovich/automation-practice-js.git
-   4. Clone repository with command *git clone*
-   5. Set user with command *git config* [more info](https://godelonline.sharepoint.com/Functions/ResearchAndDevelopment/SitePages/Workshop--Git-and-GitHub.aspx)
+   4. Set user with command *git config* [more info](https://godelonline.sharepoint.com/Functions/ResearchAndDevelopment/SitePages/Workshop--Git-and-GitHub.aspx)
+   5. Clone repository with command *git clone*
    6. Switch to dev branch with command *git checkout dev*
    7. Create own branch from dev branch with command *git checkout name-surname*
    8. Create folder for you solution and place all your code there
