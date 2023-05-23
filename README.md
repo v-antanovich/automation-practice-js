@@ -28,7 +28,7 @@ It contains for each theme of this course:
    4. Set user with command *git config* [more info](https://godelonline.sharepoint.com/Functions/ResearchAndDevelopment/SitePages/Workshop--Git-and-GitHub.aspx)
    5. Clone repository with command *git clone*
    6. Switch to dev branch with command *git checkout dev*
-   7. Create own branch from dev branch with command *git checkout name-surname*
+   7. Create own branch from dev branch with command *git checkout -b name-surname*
    8. Create folder for you solution and place all your code there
    9. Add all changes to stage with command *git add -A*
    10. Commit changes *git commit -m "your message"*
