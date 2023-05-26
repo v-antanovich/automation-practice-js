@@ -18,7 +18,7 @@ It contains for each theme of this course:
 | *Theme*  | *Links* |
 | ------------- | ------------- |
 | Intro  | [readme](README.md) |
-| Data types. Variables  | [example](src/basics/)  |
+| Data types. Variables  | [example](src/basics/variables.js)  |
 
 ## How to start?
 
