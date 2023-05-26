@@ -29,7 +29,7 @@ It contains for each theme of this course:
    5. Clone repository with command *git clone*
    6. Switch to dev branch with command *git checkout dev*
    7. Create own branch from dev branch with command *git checkout -b name-surname*
-   8. Create folder for you solution and place all your code there
+   8. Create folder (firstname letter dot surname (example - v.antanovich)) for you solution and place all your code there
    9. Add all changes to stage with command *git add -A*
    10. Commit changes *git commit -m "your message"*
    11. Push the results with command *git push origin name-surname*
