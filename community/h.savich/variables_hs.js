@@ -8,11 +8,15 @@ console.log(shopName);
 let storeDescription = {
     goods: 10000,
     employees: ['Ivanov', 'Petrov', 'Sidorov'],
-    products: [{goods: "T-shirt", price:10}, {goods:"shoes", price:50}, {goods:"dress", price:10}],
+    products: {
+        tshirt: 10, 
+        shoes: 50, 
+        dress: 30
+    },
     open: true
 };
 console.log(storeDescription.goods)
-console.log(storeDescription.products[1].price)
+console.log(storeDescription.products.shoes)
 
  //Task 2
  let myName = 'Halina';
@@ -23,7 +27,6 @@ console.log(storeDescription.products[1].price)
  };
 
  let hobbies = ['walking', 'watching movies', 'coffee break'];
-
 
  console.log(appearance.hairs);
  console.log(myName.toUpperCase())
