@@ -1,6 +1,6 @@
 let shop;
 shop = "Meat";
-console.log(`${shop}`);
+console.log(`The shop ${shop}`);
 let storeDescription = {
     goods: 10000,
     employees: [ "Bob", "Rob", "Lilia" ],

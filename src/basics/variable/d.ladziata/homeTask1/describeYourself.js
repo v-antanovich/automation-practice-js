@@ -1,9 +1,7 @@
-let firstName;
-let sername;
-firstName = "Dzmitry";
-sername = "Ladziata";
-let age;
-console.log(`${firstName} ${sername}`);
+let firstName = "Dzmitry";
+let surname = "Ladziata";
+
+console.log(`${firstName} ${surname}`);
 
 let param = {
     height: "184 cm",
