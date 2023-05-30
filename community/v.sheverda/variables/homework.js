@@ -31,9 +31,9 @@ let person = {
     gender: 'Male',
     nationality: 'Belarus',
     hobbies: ['Reading', 'Football', 'Travelling'],
-    fullName: function () {
+    getFullName: function () {
         return `${this.name} ${this.surname}`;
     }
 }
 
-console.log(person.fullName());
+console.log(person.getFullName());
