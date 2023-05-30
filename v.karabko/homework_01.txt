@@ -1,0 +1,24 @@
+
+const lidl = "LiDL";
+console.log(`Sklep: \`${lidl}\``); 
+
+let storeDescription = { 
+goods: 10000,  
+employees:['Billy', 'Dilly', 'Willy'],
+products:{apple: "1.2$",  Iphone: "1350$",  banana: "0.9$",  },
+open: true
+};
+console.log(storeDescription)
+------------
+
+const Verona= "Veronika Karabko"
+console.log(`I am %cGRUT%c ${Verona.slice(0,5).toUpperCase()} !!!`, 'text-decoration:line-through', 'text-decoration: none');
+
+let personDescription = {
+DateOfBirth: '07 Jan 1985'};
+console.log(personDescription);
+
+personDescription.FavoriteFood = ['meat', 'fish', 'Ramen'];
+personDescription.Projects = {Sorted: "2018",  CPP: "2019", NiePomniu: "2020" , Ensek: "2021", FundInfo: "2022", Citation: "2023" }
+console.log(personDescription);
+
