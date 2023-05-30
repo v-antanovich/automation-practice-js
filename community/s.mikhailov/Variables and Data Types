@@ -1,0 +1,20 @@
+//Hometask #1
+
+let storeName = 'Biedronka';
+let storeLocation = 'Poznań';
+console.log(`Welcome to ${storeName} ${storeLocation}!`)
+
+let storeDescription = {
+    goods: 1000,
+    employees: ['Olivia Ponton', 'Indina Menzel', 'Jake Short'],
+products:{
+    olej: 14.99,
+    piwo: 1.99,
+    kinder: 4.49
+    },
+    isOpen: true
+}
+console.log(storeDescription.employees[0]);
+console.log(storeDescription.products.kinder);
+
+//Hometask #2
