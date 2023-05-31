@@ -1,4 +1,3 @@
-
 const lidl = "LiDL";
 console.log(`Sklep: \`${lidl}\``); 
 
