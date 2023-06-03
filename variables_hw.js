@@ -26,13 +26,7 @@ let person = {
     isSingle: false,   
     hobbies: ["cinema", "music", "travelling"],
     kids: [true, "Ksenia", 10],
-    getFullName: function () {
-        return `${this.name} ${this.lastName}`;
-    }
 }
-
-console.log(person.getFullName());
-
 
 
 
