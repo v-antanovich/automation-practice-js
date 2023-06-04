@@ -39,6 +39,8 @@ if (hamburger || cola || fries === 3 || nuggets) {
 
 // 1. fries === 3 - false, 2. then || comparison where the last value is nuggets (2) - true, 3. function condition true -> "Done!"
 
+// Fourth task
+
 let hamburger;
 const fries = NaN;
 const cola = 0;
@@ -46,4 +48,22 @@ const nuggets = 2;
 
 if ((hamburger && cola) || (fries === 3 && nuggets)) {
   console.log("Done!");
+}
+
+// 1. hamburger && cola - undefined,  2. fries === 3 - false, 3. false && nuggets - false, 4. undefined || false - false, 5. Function condition false -> console.log("Done!") will not work
+
+// Fifth task
+
+let num = 543;
+let result = num.toString();
+// let result = String(num);
+// let result = num + '';
+// let result = JSON.stringify(num);
+// let result = num.toLocaleSting();
+// let result = num.toFixed();
+
+if (typeof result == "string") {
+  console.log("Done");
+} else {
+  console.log("Try again");
 }
