@@ -1,0 +1,78 @@
+/* 
+Logical OR: Returns expr1 if it can be converted to true; otherwise, returns expr2
+Logical AND: Returns expr1 if it can be converted to false; otherwise, returns expr2
+*/
+
+/*                                                        Task 1                                                 */
+//console.log(NaN || 2 || undefined); //answer : 2
+//console.log(NaN && 2 && undefined); //answer : NaN
+//console.log(1 && 2 && 3); // answer: 3
+//console.log(!1 && 2 || !3); // answer: false
+//console.log(25 || null && !3); //answer: 25
+//console.log(NaN || null || !3 || undefined || 5); //answer: 5
+//console.log(NaN || null && !3 && undefined || 5); //answer: 5
+//console.log(5 === 5 && 3 > 1 || 5); //answer: true
+
+/*                                                        Task 2                                                 */
+/* const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+    console.log('Done!')
+} */
+//answer: yes, expression answer: 2
+
+/*                                                        Task 3                                                */
+/* let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger || cola || fries === 3 || nuggets) {
+    console.log('Done!')
+} */
+//answer: yes, expression answer: 2
+
+/*                                                        Task 4                                                 */
+/* let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger && cola || fries === 3 && nuggets) {
+    console.log('Done!')
+} */
+//answer: no, expression answer: false
+
+/*                                                        Task 5                                                 */
+//First:
+/* let num = 543;
+let result = num.toString();
+//let result = `${num} - it's the string`;
+//let result = `${num}` + 1;
+//let result = String(num);
+if (typeof(result) == "string") {
+    console.log('Done')
+}
+    else {
+    console.log('Try again')
+}; */
+
+//Second:
+/* let str = '129';
+let result = parseInt(str);
+//let result = parseFloat(str);
+//let result = Number(str);
+//let result = + str;
+//let result = Math.floor(str);
+//let result = str * 1;
+//let result = ~~str;
+
+if (typeof(result) == "number") {
+    console.log('Done')
+}
+    else {
+    console.log('Try again')
+}; */
