@@ -36,3 +36,14 @@ const nuggets = 2;
 if (hamburger || cola || fries === 3 || nuggets) {
   console.log("Done!");
 }
+
+// 1. fries === 3 - false, 2. then || comparison where the last value is nuggets (2) - true, 3. function condition true -> "Done!"
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if ((hamburger && cola) || (fries === 3 && nuggets)) {
+  console.log("Done!");
+}
