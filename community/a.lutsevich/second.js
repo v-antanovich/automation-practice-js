@@ -7,11 +7,11 @@ console.log(NaN && 2 && undefined); // NaN (&& stops since false value)
 
 console.log((!1 && 2) || !3); // false (!1 = false, it will be returned first, than !1 || !3 again false)
 
-сonsole.log(25 || (null && !3)); // 25 (first by priority null && !3 - returns null, then 25 || null - returns 25)
+сonsole.log(25 || (null && !3)); // 25 (null && !3 - returns null, then 25 || null - returns 25)
 
-console.log(NaN || null || !3 || undefined || 5); // 5 (|| return first true value, if there are no any true values it will return last false value, the last comparison will be undefined || 5)
+console.log(NaN || null || !3 || undefined || 5); // 5 (|| return first true value, if there are no any true values it will return last false value)
 
-console.log(NaN || (null && !3 && undefined) || 5); // 5 (1.null && !3 - null, 2. null && undefined - null, 3. NaN || null - null, 4. null || 5 - 5)
+console.log(NaN || (null && !3 && undefined) || 5); // 5 (1.null, 2. NaN || null - null, 3. null || 5 - 5)
 
 console.log((5 === 5 && 3 > 1) || 5); // true
 
