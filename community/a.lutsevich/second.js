@@ -67,3 +67,16 @@ if (typeof result == "string") {
 } else {
   console.log("Try again");
 }
+
+// Sixth task
+let str = "129";
+let resultNum = +str;
+// let resultNum = Number(str);
+// let resultNum = parseInt(str);
+
+// code here result = ...
+if (typeof resultNum == "number") {
+  console.log("Done");
+} else {
+  console.log("Try again");
+}
