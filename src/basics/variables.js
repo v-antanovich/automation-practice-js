@@ -108,6 +108,7 @@ console.log("string".toUpperCase()); // STRING​
 // concat()
 text = "Hello" + " " + "World!";
 text = "Hello".concat(" ", "World!");
+console.log(text);
 
 // trim()
 console.log("   string   ".trim()); // string​
