@@ -17,9 +17,11 @@ It contains for each theme of this course:
 
 | *Theme*  | *Links* |
 | ------------- | ------------- |
-| Intro  | [readme](README.md) |
-| Data types. Variables  | [example](src/basics/variables.js) |
-| Dynamic types  | [example](src/basics/dynamicType.js) |
+| Intro | [readme](README.md) |
+| Data types. Variables | [example](src/basics/variables.js) |
+| Dynamic types | [example](src/basics/dynamicType.js) |
+| Conditions if-else, switch, loops | [example](src/basics/loops.js) |
+| Arrays | [example](src/basics/arrays.js) |
 
 ## How to start?
 
