@@ -79,6 +79,11 @@ console.log('Done!')
 //part 5 Преобразовать число в строку(несколько способов) (преобразуйте num в строку):
 let num = 543, result;
 // code here result = ...
+// result = num.toString();
+// result = String(num);
+// result = '' + num;
+// result = `${num}`;
+
 if(typeof(result)=="string") {
 console.log('Done') } else { console.log('Try again')}
 
@@ -89,5 +94,12 @@ console.log('Done') } else { console.log('Try again')}
  //Преобразовать строку в число(несколько способов) (преобразуйте str в число):
 let str = '129', result1;
 // code here result = ...
+// result1 = Number(str);
+// result1 = parseInt(str);
+// result1 = +str;
+// result1 = parseFloat(str);
+// result1 = 1* str;
+// result1 = ~~str;
+// result1 = Math.floor(str);
 if(typeof(result)=="number") {
 console.log('Done') } else { console.log('Try again')}
