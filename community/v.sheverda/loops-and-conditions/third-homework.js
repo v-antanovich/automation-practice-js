@@ -32,8 +32,8 @@ console.log(`New array is ${newArray}`);
 // let newArray1 = randomArray.map(x => x+1);
 
 // task 4 find min and max value
-let minValue = 11;
-let maxValue = -1;
+let minValue = randomArray[0];
+let maxValue = randomArray[0];
 
 for (let i = 0; i < randomArray.length; i++) {
   if (randomArray[i] < minValue) {
