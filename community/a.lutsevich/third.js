@@ -29,3 +29,17 @@ const randomNumbersArrayCopy = [...randomNumbersArray];
 for (let i = 0; i < randomNumbersArrayCopy.length; i++) {
   randomNumbersArrayCopy[i] += 1;
 }
+
+// Fourth task
+let minValue = randomNumbersArray[0];
+let maxValue = randomNumbersArray[0];
+
+for (let i = 1; i < randomNumbersArray.length; i++) {
+  let current = randomNumbersArray[i];
+
+  if (current < minValue) {
+    minValue = current;
+  } else if (current > maxValue) {
+    maxValue = current;
+  }
+}
