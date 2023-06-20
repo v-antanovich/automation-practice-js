@@ -15,3 +15,10 @@ switch (login) {
     console.log("I don't know who you are");
     break;
 }
+
+// Second task
+let randomNumbersArray = [];
+
+do {
+  randomNumbersArray.push(Math.floor(Math.random() * 11));
+} while (randomNumbersArray.length < 10);
