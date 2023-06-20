@@ -22,3 +22,10 @@ let randomNumbersArray = [];
 do {
   randomNumbersArray.push(Math.floor(Math.random() * 11));
 } while (randomNumbersArray.length < 10);
+
+// Third task
+const randomNumbersArrayCopy = [...randomNumbersArray];
+
+for (let i = 0; i < randomNumbersArrayCopy.length; i++) {
+  randomNumbersArrayCopy[i] += 1;
+}
