@@ -51,3 +51,9 @@ for (let i = 0; i < randomNumbersArray.length; i++) {
     ++countOfNumbersGreaterThanFive;
   }
 }
+
+// Sixth task
+let result,
+  x = 4,
+  y = 3;
+result = x + y < 7 ? "less" : x + y > 7 ? "more" : "equal";
