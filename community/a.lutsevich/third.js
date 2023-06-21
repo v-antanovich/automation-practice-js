@@ -43,3 +43,11 @@ for (let i = 1; i < randomNumbersArray.length; i++) {
     maxValue = current;
   }
 }
+
+// Fifth task
+let countOfNumbersGreaterThanFive = 0;
+for (let i = 0; i < randomNumbersArray.length; i++) {
+  if (randomNumbersArray[i] > 5) {
+    ++countOfNumbersGreaterThanFive;
+  }
+}
