@@ -57,3 +57,10 @@ let result,
   x = 4,
   y = 3;
 result = x + y < 7 ? "less" : x + y > 7 ? "more" : "equal";
+
+// Seventh task
+let randomNumbersArrayReversed = [];
+for (let i = randomNumbersArray.length - 1; i >= 0; i--) {
+  randomNumbersArrayReversed[randomNumbersArrayReversed.length] =
+    randomNumbersArray[i];
+}
