@@ -17,40 +17,39 @@ switch (login) {
 
 //Tasks 2 Заполните массив из 10-и элементов случайными числами от 0 до 10.
 let numbersArray = [];
-let min = 0;
-let max = 10;
 let count = 10;
 
-for (let i = min; i < count; ++i) {
+for (i = 0; i < count; ++i) {
     numbersArray.push(Math.round(Math.random() * 10));
 }
-
 console.log(numbersArray);
 
 //Task 3 Сделайте копию массива из первого задания, добавив к каждому числу +1.
+let newNumersArray = [];
+newNumersArray = numbersArray;
 for (let i = 0; i < numbersArray.length; i++) {
-    numbersArray[i]++;
+    newNumersArray[i]++;
 };
-console.log(numbersArray);
+console.log(newNumersArray);
 
 //Task 4 Найдите минимальное и максимальные числа в массиве из второго задания
 //Method 1 
-for (let i = 0; i < numbersArray.length; i++) {
-    for (let j = 0; j < numbersArray.length - i - 1; j++) {
-        if (numbersArray[j + 1] < numbersArray[j]) {
-            let tempArray = numbersArray[j];
-            numbersArray[j] = numbersArray[j + 1];
-            numbersArray[j + 1] = tempArray;
+for (let i = 0; i < newNumersArray.length; i++) {
+    for (let j = 0; j < newNumersArray.length - i - 1; j++) {
+        if (newNumersArray[j + 1] < newNumersArray[j]) {
+            let temp = newNumersArray[j];
+            newNumersArray[j] = newNumersArray[j + 1];
+            newNumersArray[j + 1] = temp;
         }
     }
 }
-console.log(`Min: ${numbersArray[0]}`);
-console.log(`Max: ${numbersArray[9]}`);
+console.log(`Min: ${newNumersArray[0]}`);
+console.log(`Max: ${newNumersArray[9]}`);
 
 //Task 4 Method 2
-let minimum = numbersArray[0];
-let maximum = numbersArray[0];
-for (numbers of numbersArray) {
+let minimum = newNumersArray[0];
+let maximum = newNumersArray[0];
+for (numbers of newNumersArray) {
     if (numbers < minimum) {
         minimum = numbers;
     }
@@ -63,16 +62,18 @@ console.log(`Max: ${maximum}`);
 
 //Task 5 Посчитайте количество чисел больше 5 в массиве из второго задания.
 let countNumbers = 0;
-for (let i = 0; i < numbersArray.length; i++) {
-    if (numbersArray[i] > 5) {
+for (let i = 0; i < newNumersArray.length; i++) {
+    if (newNumersArray[i] > 5) {
         countNumbers++;
     }
 }
 console.log(`Count is ${countNumbers}`);
 
 //Task 6 Сделайте копию массива из второго задания, развернув все его значения наоборот.
+let newestNumbersArray = [];
+newestNumbersArray = numbersArray;
 for (let i = numbersArray.length - 1; i >= 0; i--) {
-    console.log(numbersArray[i]);
+    console.log(newestNumbersArray[i]);
 };
 
 //Task 7 Перепишите конструкцию if с использованием условного оператора '?'
@@ -86,9 +87,9 @@ let lettersArray = ["zip", "sober", "sale", "class", "lecture", "alexander"];
 for (let i = 0; i < lettersArray.length; i++) {
     for (let j = 0; j < lettersArray.length - i - 1; j++) {
         if (lettersArray[j + 1] < lettersArray[j]) {
-            let tempArray = lettersArray[j];
+            let temp = lettersArray[j];
             lettersArray[j] = lettersArray[j + 1];
-            lettersArray[j + 1] = tempArray;
+            lettersArray[j + 1] = temp;
         }
     }
 }
