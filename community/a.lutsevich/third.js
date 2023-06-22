@@ -74,3 +74,16 @@ for (let i = 1; i <= treeHeight; i++) {
   let tree = spaces + stars;
   console.log(tree);
 }
+
+// Ninth task
+let wordsArray = ["zip", "sober", "sale", "class", "lecture", "alexander"];
+
+for (let i = 0; i < wordsArray.length - 1; i++) {
+  for (let j = 0; j < wordsArray.length - i - 1; j++) {
+    if (wordsArray[j] > wordsArray[j + 1]) {
+      let swapElement = wordsArray[j];
+      wordsArray[j] = wordsArray[j + 1];
+      wordsArray[j + 1] = swapElement;
+    }
+  }
+}
