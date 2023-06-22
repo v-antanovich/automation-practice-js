@@ -64,3 +64,13 @@ for (let i = randomNumbersArray.length - 1; i >= 0; i--) {
   randomNumbersArrayReversed[randomNumbersArrayReversed.length] =
     randomNumbersArray[i];
 }
+
+// Eighth task
+let treeHeight = 6;
+
+for (let i = 1; i <= treeHeight; i++) {
+  let spaces = " ".repeat(treeHeight - i);
+  let stars = "*".repeat(2 * i - 1);
+  let tree = spaces + stars;
+  console.log(tree);
+}
