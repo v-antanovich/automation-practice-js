@@ -26,7 +26,7 @@ console.log(numbersArray);
 
 //Task 3 Сделайте копию массива из первого задания, добавив к каждому числу +1.
 let newNumersArray = [];
-newNumersArray = numbersArray;
+newNumersArray = numbersArray.slice();
 for (let i = 0; i < numbersArray.length; i++) {
     newNumersArray[i]++;
 };
@@ -71,7 +71,7 @@ console.log(`Count is ${countNumbers}`);
 
 //Task 6 Сделайте копию массива из второго задания, развернув все его значения наоборот.
 let newestNumbersArray = [];
-newestNumbersArray = numbersArray;
+newestNumbersArray = numbersArray.slice();
 for (let i = numbersArray.length - 1; i >= 0; i--) {
     console.log(newestNumbersArray[i]);
 };
