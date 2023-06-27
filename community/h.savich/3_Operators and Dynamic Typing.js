@@ -42,12 +42,13 @@ if (hamburger === 3 && cola || fries === 3 && nuggets) {
 
 }
 
-//3 && cola -3
-//hamburger === 3 - true
-//3 && nuggets - 3
-//fries === 3 -3
-//3 || 3 -> 3
-//if(3) -> true -> 'Done!'
+// hamburger === 3 => true;
+// fries === 3 => true;
+// true && 0 | | true && 2;
+// true && 0 => 0;
+// true && 2 => 2;
+// 0 | | 2 => 2;
+//if(2) -> true -> 'Done!'
 
 //2 выполняется ли условие? объясните почему именно так
 
@@ -65,10 +66,10 @@ if (hamburger || cola || fries === 3 || nuggets) {
     console.log('Done!')
 
 }
+// fries === 3 ->3
 // undefined || 0 -> 0
-// NaN || 0 -> NaN
-// NaN ===3 - > false
-// false || 2  - > 2 ->'Done!'
+// 0 || 3 -> 3
+// 3 || 2  - > 3 ->'Done!'
 
 //3 //выполняется ли условие? объясните почему именно так
 
@@ -88,10 +89,10 @@ if (hamburger && cola || fries === 3 && nuggets) {
 
 }
 
-//undefined || 0 -> 0
-//3 && nuggets -> 3
-// 0 || NaN -> NaN
-// NaN ===3 -> false
+// fries === 3 ->3
+//undefined && 0 -> 0
+//0 && nuggets -> 0
+// 0 ||0 -> false
 // не выполнится
 
 
