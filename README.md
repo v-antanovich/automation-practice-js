@@ -22,6 +22,7 @@ It contains for each theme of this course:
 | Dynamic types | [example](src/basics/dynamicType.js) |
 | Conditions if-else, switch, loops | [example](src/basics/conditions_loops.js) |
 | Arrays | [example](src/basics/arrays.js) |
+| Objects | [example](src/basics/objects.js) |
 
 ## How to start?
 
