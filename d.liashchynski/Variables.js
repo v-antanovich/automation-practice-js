@@ -36,3 +36,4 @@ let age = 30;
 console.log(`Age in the current year ${age++}`);
 console.log(`Age in the next year ${age}`);
 console.log(`Height: ${user.height}\nGender: ${user.gender}\nIs maried: ${user.isMaried}`);
+
