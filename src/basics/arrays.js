@@ -100,7 +100,7 @@ console.log(elements.pop());
 console.log(elements);
 elements.push("Link");
 console.log(elements);
-// методы, работающие с концом массива:
+// методы, работающие с началом массива:
 // shift/unshift
 console.log(elements.shift());
 console.log(elements);
