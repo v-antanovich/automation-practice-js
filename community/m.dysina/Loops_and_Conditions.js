@@ -111,9 +111,9 @@ const arr3 = ["zip", "sober", "sale", "class", "lecture", "alexander"];
 for (let i = 0; i < arr3.length; i++){
     for (let j = 0; j < arr3.length - i; j++){
         if (arr3[j] > arr3[j+1]){
-            let arr4 = arr3[j];
+            let temp = arr3[j];
             arr3[j] = arr3[j + 1];
-            arr3[j + 1] = arr4;
+            arr3[j + 1] = temp;
         }
     }
 }
