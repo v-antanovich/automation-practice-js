@@ -18,7 +18,7 @@ let user = {
     firstName: "Iryna",
     lastName: "Antanovich",
     age: 33,
-    apperance: {
+    appearance: {
         eyes: "hazel",
         hair: "brown"
     },
