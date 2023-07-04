@@ -20,15 +20,15 @@ let personData = {
 };
 
 
-//console.log(options["colors"]["border"]);
+console.log(options["colors"]["border"]);
 //black
-//console.log(options.colors.bg);
+console.log(options.colors.bg);
 //red
 
 //удалить свойство объекта пару ключ значение
 
-// delete options.name;
-// console.log(options)
+delete options.name;
+console.log(options)
 
 
 
