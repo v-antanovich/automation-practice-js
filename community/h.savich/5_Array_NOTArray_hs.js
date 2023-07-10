@@ -68,12 +68,17 @@ let users = [
 
 let names = [];
 
+  // for (let i = 0; i < users.length; i++) {
+  //   for (let key in users[i]) {
+  //     if (key == 'name') {
+  //       names.push(users[i][key]);
+  //     }
+  //   }
+  // }
+
+  //improved:
   for (let i = 0; i < users.length; i++) {
-    for (let key in users[i]) {
-      if (key == 'name') {
-        names.push(users[i][key]);
-      }
-    }
+    names.push(users[i].name);
   }
 
   console.log(names);
@@ -83,13 +88,18 @@ console.log(users)
 
 let counter=0;
 let avarageAge;
-for (let i = 0; i < users.length; i++) {
-    for (let key in users[i]) {
-      if (key == 'age') {
-        counter = counter+users[i][key];
-      }
-    }
+// for (let i = 0; i < users.length; i++) {
+//     for (let key in users[i]) {
+//       if (key == 'age') {
+//         counter = counter+users[i][key];
+//       }
+//     }
     
+//   }
+
+  //improved:
+  for (let i = 0; i < users.length; i++) {
+    counter = counter+(users[i].age);
   }
   
 console.log(avarageAge = Math.round(counter/users.length))

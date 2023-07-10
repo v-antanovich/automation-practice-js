@@ -23,6 +23,7 @@ It contains for each theme of this course:
 | Conditions if-else, switch, loops | [example](src/basics/conditions_loops.js) |
 | Arrays | [example](src/basics/arrays.js) |
 | Objects | [example](src/basics/objects.js) |
+| Functions | [example](src/basics/functions.js) |
 
 ## How to start?
 
