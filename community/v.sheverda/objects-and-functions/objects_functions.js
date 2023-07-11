@@ -12,33 +12,29 @@ const personalPlanPeter = {
       skills: { languages: langs },
     } = plan;
 
-    let result = "";
+    let languageList = "";
     for (let key in langs) {
-      result += ` ${langs[key]}`.toUpperCase();
+      languageList += ` ${langs[key]}`.toUpperCase();
     }
 
-    return `Мне ${age} и я владею языками:${result}`;
+    return `Мне ${age} и я владею языками:${languageList}`;
   },
 };
 
 function showExperience(plan) {
-  let {
-    skills: { exp: experience },
-  } = plan;
-  return experience;
+  let { exp } = plan.skills;
+  return exp;
 }
 
 function showProgrammingLangs(plan) {
-  let {
-    skills: { programmingLangs: languages },
-  } = plan;
+  let { programmingLangs } = plan.skills;
 
-  if (Object.keys(languages).length === 0) {
+  if (Object.keys(programmingLangs).length === 0) {
     return "";
   } else {
     let result = "";
-    for (let [language, percentage] of Object.entries(languages)) {
-      result += `Язык ${language} изучен на ${percentage} \n`;
+    for (let [languages, percentage] of Object.entries(programmingLangs)) {
+      result += `Язык ${languages} изучен на ${percentage} \n`;
     }
     return result;
   }
