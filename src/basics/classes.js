@@ -19,7 +19,7 @@
 // с точки зрения контекста приложения, из более сложной модели.
 
 // Полиморфизм означает «множество форм», являясь, по сути, довольно простым принципом,
-// отражающим способность метода возвращать разные значения, согласно определённым условиям.
+// отражающим способность метода возвращать разные значения, согласно определённым условиям.(один метод - множество реализаций)
 
 // JavaScript реализует ООП через прототипы (функции-конструкторы).
 // Объекты js имеют специальное скрытое свойство [[Prototype]], которое либо равно null, либо ссылается на другой объект.
@@ -40,20 +40,15 @@ let rabbit = {
   jumps: true,
 };
 
-// rabbit.walk = function () {
-//   console.log("Rabbit! Bounce-bounce!");
-// };
+// rabbit.__proto__ = animal;
 
 // let longEar = {
 //   earLength: 10,
 //   __proto__: rabbit,
 // };
 
-rabbit.__proto__ = animal;
-
-// теперь мы можем найти оба свойства в rabbit:
-console.log(rabbit.eats); // true
-console.log(rabbit.jumps); // true
+console.log(rabbit.eats);
+console.log(rabbit.jumps);
 rabbit.walk();
 
 // Ссылки не могут идти по кругу. JavaScript выдаст ошибку, если мы попытаемся назначить __proto__ по кругу.
@@ -61,7 +56,9 @@ rabbit.walk();
 
 // Object.getPrototypeOf/Object.setPrototypeOf
 
-// for (let prop in longEar) console.log(prop);
+for (let prop in longEar) console.log(prop);
+
+
 
 
 
@@ -69,24 +66,23 @@ rabbit.walk();
 // Классы
 
 class User {
+  name;
   constructor(name) {
     this.name = name;
   }
 
   sayHi() {
-    console.log(this.name);
+    console.log(`Hi, ${this.name}`);
   }
 }
 
 // Использование:
 let user = new User("Ivan");
+console.log(user.name);
 user.sayHi();
 
 // класс - это функция
 console.log(typeof User);
-
-// ...или, если точнее, это метод constructor
-console.log(User === User.prototype.constructor); // true
 
 // Методы находятся в User.prototype, например:
 console.log(User.prototype.sayHi); // sayHi() { console.log(this.name); }
@@ -94,56 +90,7 @@ console.log(User.prototype.sayHi); // sayHi() { console.log(this.name); }
 // в прототипе ровно 2 метода
 console.log(Object.getOwnPropertyNames(User.prototype)); // constructor, sayHi
 
-class Human {
-  //#weight = 60;
-  constructor(name) {
-    this.name = name;
-  }
 
-  say() {
-    return `Hello, my name is ${this.name}, I like travelling`;
-  }
-
-  //   get weight() {
-  //     return this.#weight;
-  //   }
-
-  //   set weight(value) {
-  //     if (value < 0) throw new Error("Вес должен быть больше нуля");
-  //     this.#weight = value;
-  //   }
-}
-
-class Men extends Human {
-  constructor(name) {
-    super(name);
-  }
-  // Берем метод say у родителя.
-}
-
-class Programmer extends Human {
-  constructor(name) {
-    super(name);
-  }
-
-  say() {
-    // Переопределяем метод родителя say для отображения нового значения.
-    return `Hello, my name is ${this.name}, I like coding`;
-  }
-}
-
-const alex = new Men("Alex");
-const leo = new Programmer("Leo");
-
-console.log(alex.say());
-console.log(leo.say());
-
-// leo.weight = 79;
-// console.log(leo.weight);
-
-// const child = new Human("Max");
-// child.weight = 30;
-// console.log(child.weight);
 
 
 
@@ -153,27 +100,150 @@ console.log(leo.say());
 let person = {
   name: "John",
   age: 30,
-
   sayHi() {
-    // "this" - это "текущий объект".
+    // "this" - это "текущий объект"
     console.log(this.name);
   },
 };
 
-// let admin = { name: "Admin" };
+let admin = {
+  name: "Admin",
+  sayHi() {
+    console.log(this.name);
+    // let arrow = () => console.log(this.name);
+    // arrow();
+  },
+};
 
-// function sayHi() {
-//   console.log(this.name);
-// }
-// admin.f = sayHi;
-
-// admin.f();
-
-person.sayHi(); // John
+admin.sayHi();
+person.sayHi();
 
 // Значение this определяется во время исполнения кода.
 
-// При объявлении любой функции в ней можно использовать this, но этот this не имеет значения до тех пор, пока функция не будет вызвана.
-// Функция может быть скопирована между объектами (из одного объекта в другой).
-// Когда функция вызывается синтаксисом «метода» – object.method(), значением this во время вызова является object.
+// Создаётся новый пустой объект, и он присваивается this
+// Выполняется тело функции. Обычно оно модифицирует this, добавляя туда новые свойства
+// Возвращается значение this
 // Также ещё раз заметим, что стрелочные функции являются особенными – у них нет this. Когда внутри стрелочной функции обращаются к this, то его значение берётся извне.
+
+
+
+
+
+
+
+class Animal {
+  constructor(name) {
+    this.speed = 0;
+    this.name = name;
+  }
+  run(speed) {
+    this.speed = speed;
+    console.log(`${this.name} бежит со скоростью ${this.speed}.`);
+  }
+  stop() {
+    this.speed = 0;
+    console.log(`${this.name} стоит неподвижно.`);
+  }
+}
+
+let anyAnimal = new Animal("Мой питомец");
+
+class Rabbit extends Animal {
+  hide() {
+    console.log(`${this.name} прячется!`);
+  }
+  // stop() {
+  //   super.stop(); // вызываем родительский метод stop
+  //   this.hide(); // и затем hide
+  // }
+}
+
+let krol = new Rabbit("Белый кролик");
+
+krol.run(5);
+krol.stop();
+krol.hide();
+
+
+
+
+
+
+
+class Pet {
+  name;
+  constructor(name) {
+    this.name = name;
+  }
+  say() {}
+}
+
+class Cat extends Pet {
+  sleep() {
+    console.log(`${this.name} спит!`);
+  }
+  say() {
+    console.log(`Мур!`);
+  }
+}
+
+class Dog extends Pet {
+  play() {
+    console.log(`${this.name} принеси мяч!`);
+  }
+  say() {
+    console.log(`Ав!`);
+  }
+}
+
+let pet = new Pet("Бони");
+let cat = new Cat("Домино");
+let dog = new Dog("Мартин");
+pet.say();
+cat.say();
+dog.say();
+
+cat.sleep();
+dog.play();
+
+
+
+
+
+
+
+
+class Human {
+  #weight = 60;
+  constructor(name) {
+    this.name = name;
+  }
+
+  get weight() {
+    return this.#weight;
+  }
+  set weight(value) {
+    if (value < 0) throw new Error("Вес должен быть больше нуля");
+    this.#weight = value;
+  }
+}
+
+class Programmer extends Human {
+  constructor(name) {
+    super(name);
+  }
+}
+
+const leo = new Programmer("Leo");
+// leo.weight = 79;
+// console.log(leo.weight);
+// console.log(leo.#weight);
+
+
+// const max = new Human("Max");
+// max.weight = 30;
+// console.log(max.weight);
+// console.log(max._weight);
+// max.weight = 30;
+// console.log(max._weight);
+// console.log(max.weight);
