@@ -1,4 +1,4 @@
-//Hometask #4. Objects and Functions
+//Hometask #5. Objects and Functions
 
 const personalPlanPeter = {
     name: "Peter",
