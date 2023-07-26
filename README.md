@@ -24,6 +24,7 @@ It contains for each theme of this course:
 | Arrays | [example](src/basics/arrays.js) |
 | Objects | [example](src/basics/objects.js) |
 | Functions | [example](src/basics/functions.js) |
+| OOP | [example](src/basics/classes.js) |
 
 ## How to start?
 
