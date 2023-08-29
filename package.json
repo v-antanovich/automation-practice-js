@@ -1,0 +1,22 @@
+{
+  "name": "automation-practice",
+  "description": "This project is for the 'Community of automation practice JS'.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v-antanovich/automation-practice-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v-antanovich/automation-practice-js/issues"
+  },
+  "homepage": "https://github.com/v-antanovich/automation-practice-js#readme"
+}

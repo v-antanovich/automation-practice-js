@@ -5,23 +5,21 @@ console.log(NaN && 2 && undefined);
 //false //NaN - почему? как определить, что NaN, а не undefined, например?
 
 console.log(1 && 2 && 3);
-//3 
+//3
 
-console.log(!1 && 2 || !3);
+console.log((!1 && 2) || !3);
 //false
 
-console.log(25 || null && !3);
+console.log(25 || (null && !3));
 //25
-
 
 console.log(NaN || null || !3 || undefined || 5);
 //5
 
-
-console.log(NaN || null && !3 && undefined || 5);
+console.log(NaN || (null && !3 && undefined) || 5);
 //5
 
-console.log(5 === 5 && 3 > 1 || 5);
+console.log((5 === 5 && 3 > 1) || 5);
 //true - не всегда понятно, когда || будет true, а когда число - почему true || 5 выводит true,  f NaN || 2  -> 2?
 
 //выполняется ли условие? объясните почему именно так
@@ -34,12 +32,8 @@ const cola = 0;
 
 const nuggets = 2;
 
- 
-
-if (hamburger === 3 && cola || fries === 3 && nuggets) {
-
-    console.log('Done!')
-
+if ((hamburger === 3 && cola) || (fries === 3 && nuggets)) {
+  console.log("Done!");
 }
 
 // hamburger === 3 => true;
@@ -60,11 +54,8 @@ const cola = 0;
 
 const nuggets = 2;
 
-
 if (hamburger || cola || fries === 3 || nuggets) {
-
-    console.log('Done!')
-
+  console.log("Done!");
 }
 // fries === 3 ->3
 // undefined || 0 -> 0
@@ -81,12 +72,8 @@ const cola = 0;
 
 const nuggets = 2;
 
- 
-
-if (hamburger && cola || fries === 3 && nuggets) {
-
-    console.log('Done!')
-
+if ((hamburger && cola) || (fries === 3 && nuggets)) {
+  console.log("Done!");
 }
 
 // fries === 3 ->3
@@ -95,27 +82,28 @@ if (hamburger && cola || fries === 3 && nuggets) {
 // 0 ||0 -> false
 // не выполнится
 
-
- 
-
 // 4Преобразовать число в строку(несколько способов) (преобразуйте num в строку):
 
- 
-
-let num = 543, result;
+let num = 543,
+  result;
 // code here result = ...
 // result = ('' +num)
 // result = (String(num))
-if(typeof(result)=="string")  {
-console.log('Done') } else { console.log('Try again')}
-
- 
+if (typeof result == "string") {
+  console.log("Done");
+} else {
+  console.log("Try again");
+}
 
 //Преобразовать строку в число(несколько способов) (преобразуйте str в число):
-let str = '129', result;
+let str = "129",
+  result;
 // code here result = ...
 // result = (+str)
 // result = Number(str)
-result = parseInt(str)
-if(typeof(result)=="number")  {
-console.log('Done') } else { console.log('Try again')}
+result = parseInt(str);
+if (typeof result == "number") {
+  console.log("Done");
+} else {
+  console.log("Try again");
+}
