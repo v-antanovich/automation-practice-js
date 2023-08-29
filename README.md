@@ -25,7 +25,7 @@ It contains for each theme of this course:
 | Objects | [example](src/basics/objects.js) |
 | Functions | [example](src/basics/functions.js) |
 | OOP | [example](src/basics/classes.js) |
-| Node.js, npm, first jest test | [theory](src/basics/nodeNpm.js), [test](src/tests/first.test.js) |
+| Node.js, npm, first jest test | [theory](src/basics/nodeNpm.js)  [test](src/tests/first.test.js) |
 
 ## How to start?
 
