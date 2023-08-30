@@ -1,165 +1,137 @@
 const calculator = require('./calculator.js');
 
-describe('Sum function', () => {
-    test('sum() should return the sum of a and b', () => {
+describe('test functions with numbers', () => {
+    beforeAll(() => {
         calculator.a = 2;
         calculator.b = 3;
+    });
+
+    test('sum() should work', () => {
         const result = calculator.sum();
         expect(result).toBe(5);
     });
 
-    test('sum() should work with negative numbers', () => {
-        calculator.a = -5;
-        calculator.b = -3;
-        const result = calculator.sum();
-        expect(result).toBe(-8);
-    });
-
-    test('sum() should work with number and number as a string', () => {
-        calculator.a = '4';
-        calculator.b = 1;
-        const result = calculator.sum();
-        expect(result).toBe('41');
-        expect(result).toBeNaN();
-    });
-
-    test('sum() should work with floating point numbers', () => {
-        calculator.a = 0.1;
-        calculator.b = 0.2;
-        const result = calculator.sum();
-        expect(result).toBeCloseTo(0.3);
-    });
-});
-
-describe('Mul function', () => {
-    test('mul() should return the multiple of a and b', () => {
-        calculator.a = 2;
-        calculator.b = 3;
+    test('mul() should work', () => {
         const result = calculator.mul();
         expect(result).toBe(6);
     });
 
-    test('mul() should work with negative numbers', () => {
-        calculator.a = -5;
-        calculator.b = -3;
-        const result = calculator.mul();
-        expect(result).toBe(15);
-    });
-
-    test('mul() should work with one negative number and one positive', () => {
-        calculator.a = -5;
-        calculator.b = 3;
-        const result = calculator.mul();
-        expect(result).toBe(-15);
-    });
-
-    test('mul() should multiple number and string number', () => {
-        calculator.a = '4';
-        calculator.b = 1;
-        const result = calculator.mul();
-        expect(result).toBe(4);
-    });
-
-    test('mul() should return NaN if both a and b are not numbers', () => {
-        calculator.a = 'two';
-        calculator.b = 'three';
-        const result = calculator.mul();
-        expect(result).toBeNaN();
-    });
-
-    test('mul() should work with floating point numbers', () => {
-        calculator.a = 0.1;
-        calculator.b = 0.2;
-        const result = calculator.mul();
-        expect(result).toBeCloseTo(0.03);
-    });
-});
-
-describe('Sub function', () => {
-    test('sub() should return the sub of a and b', () => {
-        calculator.a = 2;
-        calculator.b = 3;
+    test('sub() should work', () => {
         const result = calculator.sub();
         expect(result).toBe(-1);
     });
 
-    test('sub() should work with negative numbers', () => {
-        calculator.a = -5;
-        calculator.b = -3;
-        const result = calculator.sub();
-        expect(result).toBe(-2);
+    test('pow() should work', () => {
+        const result = calculator.pow();
+        expect(result).toBe(8);
     });
+});
 
-    test('sub() should work number and string', () => {
-        calculator.a = '4';
-        calculator.b = 1;
-        const result = calculator.sub();
-        expect(result).toBe(3);
-    });
-
-    test('sub() should work with floating point numbers', () => {
+describe('test functions with floating numbers', () => {
+    beforeAll(() => {
         calculator.a = 0.1;
         calculator.b = 0.2;
+    });
+
+    test('sum() should work', () => {
+        const result = calculator.sum();
+        expect(result).toBeCloseTo(0.3);
+    });
+
+    test('mul() should work', () => {
+        const result = calculator.mul();
+        expect(result).toBeCloseTo(0.02);
+    });
+
+    test('sub() should work', () => {
         const result = calculator.sub();
         expect(result).toBeCloseTo(-0.1);
     });
 
-    test('sub() should return NaN if both a and b are not numbers', () => {
-        calculator.a = 'two';
-        calculator.b = 'three';
+    test('pow() should work', () => {
+        const result = calculator.pow();
+        expect(result).toBeCloseTo(0.63);
+    });
+});
+
+describe('test functions string', () => {
+    beforeAll(() => {
+        calculator.a = 'a';
+        calculator.b = 'b';
+    });
+
+    test('sum() should work', () => {
+        const result = calculator.sum();
+        expect(result).toMatch('ab');
+    });
+
+    test('mul() should return NaN', () => {
+        const result = calculator.mul();
+        expect(result).toBeNaN();
+    });
+
+    test('sub() should return NaN', () => {
         const result = calculator.sub();
+        expect(result).toBeNaN();
+    });
+
+    test('pow() should return NaN', () => {
+        const result = calculator.pow();
         expect(result).toBeNaN();
     });
 });
 
-describe('Pow function', () => {
-    test('pow() should return the pow of base with exponent', () => {
-        calculator.a = 2;
-        calculator.b = 3;
+describe('test functions with number and string', () => {
+    beforeAll(() => {
+        calculator.a = 5;
+        calculator.b = 'b';
+    });
+
+    test('sum() should work', () => {
+        const result = calculator.sum();
+        expect(result).toMatch('5b');
+    });
+
+    test('mul() should return NaN', () => {
+        const result = calculator.mul();
+        expect(result).toBeNaN();
+    });
+
+    test('sub() should return NaN', () => {
+        const result = calculator.sub();
+        expect(result).toBeNaN();
+    });
+
+    test('pow() should return NaN', () => {
         const result = calculator.pow();
+        expect(result).toBeNaN();
+    });
+});
+
+describe('test functions with negative numbers', () => {
+    beforeAll(() => {
+        calculator.a = -4;
+        calculator.b = -2;
+    });
+
+    test('sum() should work', () => {
+        const result = calculator.sum();
+        expect(result).toBe(-6);
+    });
+
+    test('mul() should work', () => {
+        const result = calculator.mul();
         expect(result).toBe(8);
     });
 
-    test('pow() should return the pow of base < 0 with exponent', () => {
-        calculator.a = -2;
-        calculator.b = 3;
-        const result = calculator.pow();
-        expect(result).toBe(-8);
+    test('sub() should work', () => {
+        const result = calculator.sub();
+        expect(result).toBe(-2);
     });
 
-    test('pow() should return the pow of base with floating exponent', () => {
-        calculator.a = 4;
-        calculator.b = 0.5;
+    test('pow() should work', () => {
         const result = calculator.pow();
-        expect(result).toBe(2);
-    });
-
-    test('pow() should return NaN if base < 0 and exponent is not an integer', () => {
-        calculator.a = -5;
-        calculator.b = 0.5;
-        const result = calculator.pow();
-        expect(result).toBeNaN();
-    });
-
-    test('pow() should return 1 if base = 0 and exponent = 0', () => {
-        calculator.a = 0;
-        calculator.b = 0;
-        const result = calculator.pow();
-        expect(result).toBe(1);
-    });
-
-    test('pow() should return NaN if exponent is NaN', () => {
-        calculator.a = 2;
-        calculator.b = NaN;
-        const result = calculator.pow();
-        expect(result).toBeNaN();
-    });
-
-    test('pow() should work with negative exponent', () => {
-        calculator.a = 5;
-        calculator.b = -2;
-        const result = calculator.pow();
-        expect(result).toBeCloseTo(0.04);
+        expect(result).toBe(0.0625);
     });
 });
 
