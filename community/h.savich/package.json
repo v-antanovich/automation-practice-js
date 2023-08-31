@@ -1,0 +1,14 @@
+{
+  "name": "h.savich",
+  "version": "1.0.0",
+  "description": "hs tests",
+  "main": "2_variables_hs.js",
+  "scripts": {
+    "test": "jest community/h.savich/tests/hs.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
+}

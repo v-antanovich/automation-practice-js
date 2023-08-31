@@ -8,7 +8,7 @@ let calculator = {
   },
 
   sub() {
-    return this.a / this.b;
+    return this.a - this.b;
   },
 
   div() {
@@ -35,3 +35,5 @@ let calculator = {
     return "Hi, " + name;
   },
 };
+
+module.exports = calculator;
