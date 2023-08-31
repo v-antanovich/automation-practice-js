@@ -39,6 +39,7 @@ describe('test functions with floating numbers', () => {
 
     test('sum() should work', () => {
         const result = calculator.sum();
+        
         expect(result).toBeCloseTo(0.3);
     });
 
@@ -174,7 +175,7 @@ describe('sayHi function', () => {
 
     test('sayHi() should work with NaN', () => {
         const result = calculator.sayHi(NaN);
-        
+
         expect(result).toMatch('Hi, NaN');
     });
 });
