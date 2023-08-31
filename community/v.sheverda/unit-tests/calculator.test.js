@@ -6,25 +6,25 @@ describe('test functions with numbers', () => {
         calculator.b = 3;
     });
 
-    test('sum() should work', () => {
+    test('sum() should add two numbers', () => {
         const result = calculator.sum();
 
         expect(result).toBe(5);
     });
 
-    test('mul() should work', () => {
+    test('mul() should multiply two numbers', () => {
         const result = calculator.mul();
 
         expect(result).toBe(6);
     });
 
-    test('sub() should work', () => {
+    test('sub() should subtract two numbers', () => {
 
         const result = calculator.sub();
         expect(result).toBe(-1);
     });
 
-    test('pow() should work', () => {
+    test('pow() should raise a number to the given power', () => {
         const result = calculator.pow();
         
         expect(result).toBe(8);
@@ -37,27 +37,27 @@ describe('test functions with floating numbers', () => {
         calculator.b = 0.2;
     });
 
-    test('sum() should work', () => {
+    test('sum() should add two numbers', () => {
         const result = calculator.sum();
-        
-        expect(result).toBeCloseTo(0.3);
+
+        expect(result).toBeCloseTo(0.3, 10);
     });
 
-    test('mul() should work', () => {
+    test('mul() should multiply two numbers', () => {
         const result = calculator.mul();
 
-        expect(result).toBeCloseTo(0.02);
+        expect(result).toBeCloseTo(0.02, 10);
     });
 
-    test('sub() should work', () => {
+    test('sub() should subtract two numbers', () => {
         const result = calculator.sub();
 
-        expect(result).toBeCloseTo(-0.1);
+        expect(result).toBeCloseTo(-0.1, 10);
     });
 
-    test('pow() should work', () => {
+    test('pow() should raise a number to the given power', () => {
         const result = calculator.pow();
-        expect(result).toBeCloseTo(0.63);
+        expect(result).toBeCloseTo(0.63, 10);
     });
 });
 
@@ -67,7 +67,7 @@ describe('test functions with string', () => {
         calculator.b = 'b';
     });
 
-    test('sum() should work', () => {
+    test('sum() should concatenate two strings', () => {
         const result = calculator.sum();
 
         expect(result).toMatch('ab');
@@ -98,7 +98,7 @@ describe('test functions with number and string', () => {
         calculator.b = 'b';
     });
 
-    test('sum() should work', () => {
+    test('sum() should concatenate number and string', () => {
         const result = calculator.sum();
 
         expect(result).toMatch('5b');
@@ -129,28 +129,28 @@ describe('test functions with negative numbers', () => {
         calculator.b = -2;
     });
 
-    test('sum() should work', () => {
+    test('sum() should add two negative numbers', () => {
         const result = calculator.sum();
 
         expect(result).toBe(-6);
     });
 
-    test('mul() should work', () => {
+    test('mul() should multiply two negative numbers', () => {
         const result = calculator.mul();
 
         expect(result).toBe(8);
     });
 
-    test('sub() should work', () => {
+    test('sub() should subtract two negative numbers', () => {
         const result = calculator.sub();
         
         expect(result).toBe(-2);
     });
 
-    test('pow() should work', () => {
+    test('pow() should raise a number to the given power', () => {
         const result = calculator.pow();
 
-        expect(result).toBe(0.0625);
+        expect(result).toBeCloseTo(0.0625, 10);
     });
 });
 
