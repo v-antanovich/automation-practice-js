@@ -8,21 +8,25 @@ describe('test functions with numbers', () => {
 
     test('sum() should work', () => {
         const result = calculator.sum();
+
         expect(result).toBe(5);
     });
 
     test('mul() should work', () => {
         const result = calculator.mul();
+
         expect(result).toBe(6);
     });
 
     test('sub() should work', () => {
+
         const result = calculator.sub();
         expect(result).toBe(-1);
     });
 
     test('pow() should work', () => {
         const result = calculator.pow();
+        
         expect(result).toBe(8);
     });
 });
@@ -40,11 +44,13 @@ describe('test functions with floating numbers', () => {
 
     test('mul() should work', () => {
         const result = calculator.mul();
+
         expect(result).toBeCloseTo(0.02);
     });
 
     test('sub() should work', () => {
         const result = calculator.sub();
+
         expect(result).toBeCloseTo(-0.1);
     });
 
@@ -54,7 +60,7 @@ describe('test functions with floating numbers', () => {
     });
 });
 
-describe('test functions string', () => {
+describe('test functions with string', () => {
     beforeAll(() => {
         calculator.a = 'a';
         calculator.b = 'b';
@@ -62,21 +68,25 @@ describe('test functions string', () => {
 
     test('sum() should work', () => {
         const result = calculator.sum();
+
         expect(result).toMatch('ab');
     });
 
     test('mul() should return NaN', () => {
         const result = calculator.mul();
+
         expect(result).toBeNaN();
     });
 
     test('sub() should return NaN', () => {
         const result = calculator.sub();
+
         expect(result).toBeNaN();
     });
 
     test('pow() should return NaN', () => {
         const result = calculator.pow();
+
         expect(result).toBeNaN();
     });
 });
@@ -89,21 +99,25 @@ describe('test functions with number and string', () => {
 
     test('sum() should work', () => {
         const result = calculator.sum();
+
         expect(result).toMatch('5b');
     });
 
     test('mul() should return NaN', () => {
         const result = calculator.mul();
+
         expect(result).toBeNaN();
     });
 
     test('sub() should return NaN', () => {
         const result = calculator.sub();
+
         expect(result).toBeNaN();
     });
 
     test('pow() should return NaN', () => {
         const result = calculator.pow();
+
         expect(result).toBeNaN();
     });
 });
@@ -116,21 +130,25 @@ describe('test functions with negative numbers', () => {
 
     test('sum() should work', () => {
         const result = calculator.sum();
+
         expect(result).toBe(-6);
     });
 
     test('mul() should work', () => {
         const result = calculator.mul();
+
         expect(result).toBe(8);
     });
 
     test('sub() should work', () => {
         const result = calculator.sub();
+        
         expect(result).toBe(-2);
     });
 
     test('pow() should work', () => {
         const result = calculator.pow();
+
         expect(result).toBe(0.0625);
     });
 });
@@ -138,21 +156,25 @@ describe('test functions with negative numbers', () => {
 describe('sayHi function', () => {
     test('sayHi() should work with general string', () => {
         const result = calculator.sayHi('Vlad');
+
         expect(result).toMatch('Hi, Vlad');
     });
 
     test('sayHi() should work with number', () => {
         const result = calculator.sayHi(13);
+
         expect(result).toMatch('Hi, 13');
     });
 
     test('sayHi() should work with empty space', () => {
         const result = calculator.sayHi(' ');
+
         expect(result).toMatch('Hi,  ');
     });
 
     test('sayHi() should work with NaN', () => {
         const result = calculator.sayHi(NaN);
+        
         expect(result).toMatch('Hi, NaN');
     });
 });
