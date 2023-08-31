@@ -19,8 +19,8 @@ describe('test functions with numbers', () => {
     });
 
     test('sub() should subtract two numbers', () => {
-
         const result = calculator.sub();
+
         expect(result).toBe(-1);
     });
 
@@ -57,6 +57,7 @@ describe('test functions with floating numbers', () => {
 
     test('pow() should raise a number to the given power', () => {
         const result = calculator.pow();
+        
         expect(result).toBeCloseTo(0.63, 10);
     });
 });
