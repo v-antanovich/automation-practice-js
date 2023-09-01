@@ -25,7 +25,6 @@ describe('test functions with numbers', () => {
     });
 
     test('div() should throw an error when dividing by zero', () => {
-        calculator.a = 2;
         calculator.b = 0;
 
         const result = calculator.div();
