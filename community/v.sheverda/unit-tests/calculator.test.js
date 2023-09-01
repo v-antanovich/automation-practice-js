@@ -18,6 +18,21 @@ describe('test functions with numbers', () => {
         expect(result).toBe(6);
     });
 
+    test('div() should division two numbers', () => {
+        const result = calculator.div();
+
+        expect(result).toBeCloseTo(0.67, 2);
+    });
+
+    test('div() should throw an error when dividing by zero', () => {
+        calculator.a = 2;
+        calculator.b = 0;
+
+        const result = calculator.div();
+
+        expect(result).toThrow("Division by zero is not allowed");
+    });
+
     test('sub() should subtract two numbers', () => {
         const result = calculator.sub();
 
@@ -26,7 +41,7 @@ describe('test functions with numbers', () => {
 
     test('pow() should raise a number to the given power', () => {
         const result = calculator.pow();
-        
+
         expect(result).toBe(8);
     });
 });
@@ -49,6 +64,12 @@ describe('test functions with floating numbers', () => {
         expect(result).toBeCloseTo(0.02, 10);
     });
 
+    test('div() should division two numbers', () => {
+        const result = calculator.div();
+
+        expect(result).toBeCloseTo(0.5);
+    });
+
     test('sub() should subtract two numbers', () => {
         const result = calculator.sub();
 
@@ -57,7 +78,7 @@ describe('test functions with floating numbers', () => {
 
     test('pow() should raise a number to the given power', () => {
         const result = calculator.pow();
-        
+
         expect(result).toBeCloseTo(0.63, 10);
     });
 });
@@ -76,6 +97,12 @@ describe('test functions with string', () => {
 
     test('mul() should return NaN', () => {
         const result = calculator.mul();
+
+        expect(result).toBeNaN();
+    });
+
+    test('div() should return NaN', () => {
+        const result = calculator.div();
 
         expect(result).toBeNaN();
     });
@@ -111,6 +138,12 @@ describe('test functions with number and string', () => {
         expect(result).toBeNaN();
     });
 
+    test('div() should return NaN', () => {
+        const result = calculator.div();
+
+        expect(result).toBeNaN();
+    });
+
     test('sub() should return NaN', () => {
         const result = calculator.sub();
 
@@ -142,9 +175,15 @@ describe('test functions with negative numbers', () => {
         expect(result).toBe(8);
     });
 
+    test('div() should return NaN', () => {
+        const result = calculator.div();
+
+        expect(result).toBe(2);
+    });
+
     test('sub() should subtract two negative numbers', () => {
         const result = calculator.sub();
-        
+
         expect(result).toBe(-2);
     });
 
