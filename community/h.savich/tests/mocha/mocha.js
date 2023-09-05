@@ -1,6 +1,5 @@
 const calculator = require("../calculator.js");
-const addContext = require("mochawesome/addContext");
-var assert = require("assert");
+const assert = require("assert");
 
 describe("Test with mocha", function () {
   describe("Calculator: sum", function () {
