@@ -5,7 +5,7 @@
   "main": "2_variables_hs.js",
   "scripts": {
     "test": "jest tests/",
-    "test:mocha": "mocha mocha/ --reporter mochawesome"
+    "test:mocha": "mocha tests/mocha/ --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,6 @@
     "mocha": "^10.2.0"
   },
   "dependencies": {
-    "mochawesome": "^7.1.3",
-    "prompt": "^1.3.0"
+    "mochawesome": "^7.1.3"
   }
 }

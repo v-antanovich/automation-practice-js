@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-04T13:36:13.983Z",
-    "end": "2023-09-04T13:36:14.014Z",
-    "duration": 31,
+    "start": "2023-09-05T09:52:56.171Z",
+    "end": "2023-09-05T09:52:56.192Z",
+    "duration": 21,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,36 +18,36 @@
   },
   "results": [
     {
-      "uuid": "7e595846-0233-4e47-b255-8d5bd5278863",
+      "uuid": "cc397352-fef9-4bec-be5f-7d44441d7758",
       "title": "",
-      "fullFile": "D:\\vsfile\\folder\\automation-practice-js\\community\\h.savich\\mocha\\mocha.js",
-      "file": "\\mocha\\mocha.js",
+      "fullFile": "D:\\vsfile\\folder\\automation-practice-js\\community\\h.savich\\tests\\mocha\\mocha.test.js",
+      "file": "\\tests\\mocha\\mocha.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "47161ccb-8db8-4f38-8346-4e6f327a25c1",
-          "title": "Array",
-          "fullFile": "D:\\vsfile\\folder\\automation-practice-js\\community\\h.savich\\mocha\\mocha.js",
-          "file": "\\mocha\\mocha.js",
+          "uuid": "52450130-9351-40ca-bb83-baf749b2a31f",
+          "title": "Test with mocha",
+          "fullFile": "D:\\vsfile\\folder\\automation-practice-js\\community\\h.savich\\tests\\mocha\\mocha.test.js",
+          "file": "\\tests\\mocha\\mocha.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [],
           "suites": [
             {
-              "uuid": "5634e77a-6959-4280-b52d-8e3895318dcb",
+              "uuid": "55e38464-ec87-45b1-9025-f2634ef4c23a",
               "title": "Calculator: sum",
-              "fullFile": "D:\\vsfile\\folder\\automation-practice-js\\community\\h.savich\\mocha\\mocha.js",
-              "file": "\\mocha\\mocha.js",
+              "fullFile": "D:\\vsfile\\folder\\automation-practice-js\\community\\h.savich\\tests\\mocha\\mocha.test.js",
+              "file": "\\tests\\mocha\\mocha.test.js",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
                   "title": "should return the sum od two nubmers",
-                  "fullTitle": "Array Calculator: sum should return the sum od two nubmers",
+                  "fullTitle": "Test with mocha Calculator: sum should return the sum od two nubmers",
                   "timedOut": false,
-                  "duration": 1,
+                  "duration": 0,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "calculator.a = 3;\ncalculator.b = 6;\nassert.equal(calculator.sum(), 9);",
                   "err": {},
-                  "uuid": "9438aefa-a90f-436f-9f61-5b0d99e50c6e",
-                  "parentUUID": "5634e77a-6959-4280-b52d-8e3895318dcb",
+                  "uuid": "15fe532e-2996-40c3-bdd7-0a724e93f3e4",
+                  "parentUUID": "55e38464-ec87-45b1-9025-f2634ef4c23a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "9438aefa-a90f-436f-9f61-5b0d99e50c6e"
+                "15fe532e-2996-40c3-bdd7-0a724e93f3e4"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1,
+              "duration": 0,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
