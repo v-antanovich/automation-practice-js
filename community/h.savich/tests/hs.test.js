@@ -1,5 +1,4 @@
 const calculator = require("./calculator.js");
-const { describe, expect, test } = require("@jest/globals");
 
 test("sum is equal 9", () => {
   calculator.a = 3;
