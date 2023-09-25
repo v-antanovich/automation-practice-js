@@ -37,3 +37,12 @@ test('incorrect login', async ({ page }) => {
   await expect(page.locator('div.login-form p')).toHaveText(passwordIsIncorrect);
 });
 
+test('test cases list', async ({ page }) => {
+  await page.goto('https://automationexercise.com');
+  await page.locator("div.logo").isVisible();
+  await page.locator("//a[contains(text(), 'Test Cases')]").click();
+  const numberOfElements = await page.locator('//h4//u').count()
+  for(let i=1; i <= numberOfElements; i++) {
+    await expect(page.locator(`//u[contains(text(), 'Test Case ${i}:')]`)).toContainText(`Test Case ${i}:`);
+  }
+});
