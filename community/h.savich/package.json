@@ -1,0 +1,19 @@
+{
+  "name": "h.savich",
+  "version": "1.0.0",
+  "description": "hs tests",
+  "main": "2_variables_hs.js",
+  "scripts": {
+    "test": "jest tests/",
+    "test:mocha": "mocha tests/mocha/ --reporter mochawesome"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "mochawesome": "^7.1.3"
+  }
+}
