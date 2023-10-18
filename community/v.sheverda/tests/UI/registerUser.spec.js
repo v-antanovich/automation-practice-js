@@ -2,11 +2,11 @@ import { test, expect } from '../../UI/fixtures/pageFixture';
 import { userInfo, addressInfo } from '../../UI/constants/index';
 
 test('should register a new user', async ({ mainPage, accountCreatedPage, createUserPage, deleteAccountPage, registerUserPage }) => {
-    await expect.soft(mainPage.getMainPage.checkIsVisible()).toBeTruthy();
+    await expect(mainPage.getMainPage.checkIsVisible()).toBeTruthy();
 
     await mainPage.goToLoginPage();
 
-    await expect.soft(registerUserPage.getSignUpForm.checkIsVisible()).toBeTruthy();
+    await expect(registerUserPage.getSignUpForm.checkIsVisible()).toBeTruthy();
 
     await registerUserPage.fillUserData(userInfo.name, userInfo.email);
     await createUserPage.enterAccountInformation(
@@ -33,18 +33,18 @@ test('should register a new user', async ({ mainPage, accountCreatedPage, create
     const createAccountButton = await createUserPage.getCreateAccountButton();
     await createAccountButton.click();
 
-    await expect.soft(accountCreatedPage.getAccountCreatedLabel.checkIsVisible()).toBeTruthy();
+    await expect(accountCreatedPage.getAccountCreatedLabel.checkIsVisible()).toBeTruthy();
 
     const continueButtonAccountCreatedPage = await accountCreatedPage.getContinueButton();
     await continueButtonAccountCreatedPage.click();
 
     const actualLoggedInAsUserMessage = await mainPage.getLoggedUserLabelText();
-    await expect.soft(actualLoggedInAsUserMessage).toBe(userInfo.isLoggedAs);
+    await expect(actualLoggedInAsUserMessage).toBe(userInfo.isLoggedAs);
 
     const deleteLink = await mainPage.getDeleteLink();
     await deleteLink.click();
 
-    await expect.soft(deleteAccountPage.getAccountDeletedText.checkIsVisible()).toBeTruthy();
+    await expect(deleteAccountPage.getAccountDeletedText.checkIsVisible()).toBeTruthy();
 
     const continueButtonAccountDeletePage = await deleteAccountPage.getContinueButton();
     await continueButtonAccountDeletePage.click();
