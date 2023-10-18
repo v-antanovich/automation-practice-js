@@ -18,9 +18,15 @@
   },
   "homepage": "https://github.com/v-antanovich/automation-practice-js#readme",
   "scripts": {
-    "test:unit": "jest community/v.sheverda/unit-tests/calculator.test.js"
+    "test:unit": "jest community/v.sheverda/unit-tests/calculator.test.js",
+    "test:register": "npx playwright test community/v.sheverda/tests/UI/.*.spec.js --project=chromium",
+    "test:ui": "npx playwright test community/v.sheverda/tests/UI/.*.spec.js --ui",
+    "test:headed": "npx playwright test community/v.sheverda/tests/UI/.*.spec.js --project=chromium --headed",
+    "report": "npx playwright show-report",
+    "test:api": "npx playwright test community/v.sheverda/tests/API/.*.spec.js"
   },
   "devDependencies": {
-    "jest": "^29.6.4"
+    "jest": "^29.6.4",
+    "@playwright/test": "^1.39.0"
   }
 }

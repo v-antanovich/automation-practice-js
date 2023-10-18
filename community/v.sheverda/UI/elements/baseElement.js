@@ -1,0 +1,35 @@
+export class BaseElement {
+    #locator;
+
+    constructor(locator) {
+        this.#locator = locator;
+    }
+
+    #getLocator() {
+        return this.#locator;
+    }
+
+    async click() {
+        await this.#getLocator().click();
+    }
+
+    async check() {
+        await this.#getLocator().check();
+    }
+
+    async fill(text) {
+        await this.#getLocator().fill(text);
+    }
+
+    async selectOption(option) {
+        await this.#getLocator().selectOption({ value: option });
+    }
+
+    async checkIsVisible() {
+        return this.#getLocator().isVisible();
+    }
+
+    async getText() {
+        return this.#getLocator().textContent();
+    }
+}
