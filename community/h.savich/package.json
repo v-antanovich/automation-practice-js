@@ -5,11 +5,16 @@
   "main": "2_variables_hs.js",
   "scripts": {
     "test": "jest tests/",
-    "test:mocha": "mocha tests/mocha/ --reporter mochawesome"
+    "test:mocha": "mocha tests/mocha/ --reporter mochawesome",
+    "test:pw": "npx playwright test community/h.savich/e2e/pw_api_tests/listForPractice.test.js",
+    "test:pwUI": "npx playwright test community/h.savich/e2e/pw_UI_tests/automationexercise.spec.js",
+    "test:s": "npx playwright test tests/saucedemo.spec.js --headed"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.6",
     "jest": "^29.6.4",
     "mocha": "^10.2.0"
   },
