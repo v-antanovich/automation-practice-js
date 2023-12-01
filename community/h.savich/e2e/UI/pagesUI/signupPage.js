@@ -1,10 +1,12 @@
+import { mainPageUrl } from "../constants/urls";
+
 export class SignupPage {
   constructor(page) {
     this.page = page;
   }
 
   async openSighupPage() {
-    await this.page.goto("http://automationexercise.com");
+    await this.page.goto(mainPageUrl);
   }
 
   async closeSighupPage() {

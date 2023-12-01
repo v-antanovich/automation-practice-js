@@ -1,7 +1,11 @@
 import { test, expect } from "@playwright/test";
+import { productsListUrl } from "../constants/urls";
+import { searchProductUrl } from "../constants/urls";
+import { brandsListUrl } from "../constants/urls";
+import { verifyLoginUrl } from "../constants/urls";
 
 test("Get All Products List", async ({ request }) => {
-  const url = "https://automationexercise.com/api/productsList";
+  const url = productsListUrl;
   const response = await request.get(url);
   const responceBody = await response.json();
   console.log(responceBody);
@@ -9,8 +13,7 @@ test("Get All Products List", async ({ request }) => {
 });
 
 test("POST To All Products List", async ({ request }) => {
-  const url = "https://automationexercise.com/api/productsList";
-  const response = await request.post(url);
+  const response = await request.post(productsListUrl);
   expect(response.status()).toBe(200);
   const responceBody = await response.json();
   expect(responceBody.responseCode).toBe(405);
@@ -21,8 +24,7 @@ test("POST To All Products List", async ({ request }) => {
 });
 
 test("POST To Search Product", async ({ request }) => {
-  const url = "https://automationexercise.com/api/searchProduct";
-  const response = await request.post(url, {
+  const response = await request.post(searchProductUrl, {
     form: {
       search_product: "Top",
     },
@@ -37,8 +39,7 @@ test("POST To Search Product", async ({ request }) => {
 });
 
 test("PUT To All Brands List", async ({ request }) => {
-  const url = "https://automationexercise.com/api/brandsList";
-  const response = await request.put(url);
+  const response = await request.put(brandsListUrl);
   expect(response.status()).toBe(200);
   const responceBody = await response.json();
   expect(responceBody.responseCode).toBe(405);
@@ -48,8 +49,7 @@ test("PUT To All Brands List", async ({ request }) => {
 });
 
 test("DELETE To Verify Login", async ({ request }) => {
-  const url = "https://automationexercise.com/api/verifyLogin";
-  const response = await request.delete(url);
+  const response = await request.delete(verifyLoginUrl);
   expect(response.status()).toBe(200);
   const responceBody = await response.json();
   expect(responceBody.responseCode).toBe(405);
