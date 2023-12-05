@@ -7,7 +7,8 @@
     "test": "jest tests/",
     "test:mocha": "mocha tests/mocha/ --reporter mochawesome",
     "test:pw": "npx playwright test community/h.savich/e2e/API/pw_api_tests",
-    "test:pwUI": "npx playwright test community/h.savich/e2e/UI/pw_UI_tests/automationexercise.spec.js",
+    "test:pwUi": "npx playwright test community/h.savich/e2e/UI/pw_UI_tests/automationexercise.spec.js --ui",
+    "test:UIheaded": "npx playwright test community/h.savich/e2e/UI/pw_UI_tests/automationexercise.spec.js --headed",
     "test:s": "npx playwright test tests/saucedemo.spec.js --headed"
   },
   "author": "",
@@ -19,6 +20,7 @@
     "mocha": "^10.2.0"
   },
   "dependencies": {
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "mysql2": "^3.6.5"
   }
 }
